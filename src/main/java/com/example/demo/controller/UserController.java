@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.dao.User;
+import com.example.demo.model.User;
+import lombok.Getter;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -13,6 +14,7 @@ public class UserController {
     //创建一个线程安全的Map
     static Map<Integer, User> users = Collections.synchronizedMap(new HashMap<Integer, User>());
 
+    //必须localhost:8080/user/访问
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Integer createUser(@ModelAttribute User user) {
         //将映射注入好的对象加入Map

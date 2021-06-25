@@ -19,15 +19,16 @@ public class DemoControllerTest {
     private Admin mp;
 
     @Test
-    public void testMp(){
-        System.out.println("配置文件的映射:"+this.mp.getUsername());
+    public void testMp() {
+        System.out.println("配置文件的映射:" + this.mp.getUsername());
     }
 
 
     @Test
-    public void log(){
+    public void log() {
         Logger log = LoggerFactory.getLogger(Admin.class);
         log.info("这是一个用来测试配置文件的映射的类 ");
     }
+
 
 }

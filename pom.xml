@@ -74,6 +74,17 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--会自动加载依赖项目-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
+        <!--引入thymeleaf模板引擎 可以动静态展示-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
 
         <!--让系统所有的日志都统一到slf4j
         <dependency>
@@ -81,18 +92,7 @@
             <artifactId>spring-boot-starter-logging</artifactId>
         </dependency>
         -->
-        <!-- Junit工具包引入 -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-        <!--工具类 可减少相应重复代码get/set-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
+
         <!--SpringBoot启动运行监视器 需要去配置文件设置
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -117,13 +117,43 @@
             <version>2.1.0</version>
         </dependency>
          -->
-        <!--监控客户端(页面)-->
+        <!--监控客户端(页面)
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-client</artifactId>
             <version>2.1.0</version>
         </dependency>
+        -->
+        <!-- 工具包引入 -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+        </dependency>
+        <!--可减少相应重复代码get/set-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--各种数据校验输出-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.5</version>
+        </dependency>
 
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>29.0-jre</version>
+        </dependency>
+        <!--解析用户请求信息-->
+        <dependency>
+            <groupId>eu.bitwalker</groupId>
+            <artifactId>UserAgentUtils</artifactId>
+            <version>1.20</version>
+        </dependency>
     </dependencies>
 
     <!--监控客户端项目引入 配合监视器客户端使用
