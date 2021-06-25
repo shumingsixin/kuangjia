@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <remark>resources文件夹目录结构</remark>
+    <static>static 保存所有静态资源; js css images</static>
+    <templates>保存所有模板页面;默认不支持jsp页面;可以使用模板引擎(freemarker,thymeleaf)</templates>
+    <application.preperties>Spring Boot应用配置文件;可多个:application-dev,application-test</application.preperties>
+    <preperties.show>spring.profiles.active=dev </preperties.show>
+    <application.yml>Boot的配置文件,也可以使用yml格式,是一个标记语言</application.yml>
+    <yml.show>
+        格式: k:(空格)v(数字,字符串,布尔) 表示键值对(空格必须有);以空格的缩进控制层级关系,只要是左对齐就是一个层级; 大小写敏感
+        server:
+            port: 8080
+            patg: /hello
+            name: "张三\n历史" (可支持换行)
+    </yml.show>
+</resources>
