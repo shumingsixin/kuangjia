@@ -8,9 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @SpringBootApplicationg 用来标注一个主程序类, 说明是一个Spring Boot应用
  * @SpringBootConfiguration 用来标注SpringBoot的配置类
  * @Coinfiguration 配置类上标注这个注解
- * @Component,@EnableAutoConfiguration 开启自动配置功能
+ * @Component 标注这是个组件
+ * @EnableAutoConfiguration 开启自动配置功能
  * @AutoConfigurationPackage 自动配置包
- * @Import(AutoConfigurationPackages.Registrar.class) 给容器导入一个组件
+ * @Import(AutoConfigurationPackages.Registrar.class) 给容器注册导入一个组件
  */
 @SpringBootApplication
 @Slf4j//引入日志工具
