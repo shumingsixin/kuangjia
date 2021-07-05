@@ -27,12 +27,20 @@ public class ProjectExceptionHander {
 
     /**
      * 运行时错误json处理
+     *
      * @param e
      * @return
      */
     @ExceptionHandler(value = RuntimeException.class)
     @ResponseBody
     public ApiResponse runErrorHander(RuntimeException e) {
+        log.error("[JsonException] : {}", e.getMessage());
+        return ApiResponse.ofException(e);
+    }
+
+    @ExceptionHandler(value = Exception.class)
+    @ResponseBody
+    public ApiResponse errorHander(Exception e) {
         log.error("[JsonException] : {}", e.getMessage());
         return ApiResponse.ofException(e);
     }

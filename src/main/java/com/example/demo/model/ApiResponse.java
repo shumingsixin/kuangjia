@@ -112,7 +112,7 @@ public class ApiResponse {
      * @param e
      * @return
      */
-    public static  ApiResponse ofException(RuntimeException e){
+    public static  ApiResponse ofException(Exception e){
         return of(Status.UNKNOWN_ERROR.getCode(),e.getMessage(),null);
     }
 }

@@ -60,6 +60,7 @@
             <optional>true</optional>
         </dependency>
 
+        <!--数据库连接-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
